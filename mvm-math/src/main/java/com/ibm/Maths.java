@@ -8,5 +8,7 @@ public class Maths {
 		 public int sub (int b , int c) {
 			 return b-c;
 		 }
-		
+		public int div(int b, int c) {
+			return b/c;
+		}
 }
