@@ -21,5 +21,10 @@ public class testMaths {
 		assertEquals(10, maths.add(5, 5));
 	}
 	
+	@Test
+	public void testdiv{
+		assertEquals(1, maths.div(3, 3));
+	}
+	
 	
 }
