@@ -22,9 +22,12 @@ public class testMaths {
 	}
 	
 	@Test
-	public void testdiv{
+	public void testdiv(){
 		assertEquals(1, maths.div(3, 3));
 	}
 	
+	public void invaliddiv() {
+		assertEquals(2,maths.div(4, 2));
+	}
 	
 }
