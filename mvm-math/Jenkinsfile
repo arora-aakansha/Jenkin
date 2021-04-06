@@ -2,7 +2,8 @@ pipeline{
 	agent any
 	
 	stages{
-		steps ('Check stage'){
+		stage ('Check stage'){
+			steps{
 			withMaven(maven : 'Mvn'){
 		           bat 'mvn --version'
 			}
@@ -24,3 +25,4 @@ pipeline{
 		}
 	}
 }		
+}
