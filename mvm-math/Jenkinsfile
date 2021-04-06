@@ -11,15 +11,14 @@ pipeline{
 	stage('Compile stage'){
 			steps{
 				withMaven(maven : 'MVN'){
-				bat 'mvn clean compile'
+				bat 'mvn -f mvm-math/pom.xml compile'
 			}
 		}
 	}
 		stage('Test stage'){
 			steps{
 			withMaven(maven : 'MVN'){
-			 	bat 'mvn test'
-			}
+			 	bat 'mvn -f mvm-math/pom.xml install'			}
 		}
 	}
 		
