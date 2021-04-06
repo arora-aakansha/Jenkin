@@ -1,0 +1,25 @@
+pipeline{
+	agent any
+	stages{
+		stage('Check stage'){
+			withMaven(maven : 'MVN'){
+		           bat 'mvn --version'
+			}
+		}
+	}
+		
+	stage('Compile stage'){
+			steps{
+				withMaven(maven : 'MVN'){
+				bat 'mvn clean compile'
+			}
+		}
+	}
+		stage('Test stage'){
+			steps{
+			withMaven(maven : 'MVN'){
+			 	bat 'mvn test'
+			}
+		}
+	}
+		
