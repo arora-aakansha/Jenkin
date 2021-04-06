@@ -18,7 +18,8 @@ pipeline{
 		stage('Test stage'){
 			steps{
 			withMaven(maven : 'MVN'){
-			 	bat 'mvn -f mvm-math/pom.xml install'			}
+			 	bat 'mvn -f mvm-math/pom.xml install'			
+			 	}
 		}
 	}
-		
+}		
