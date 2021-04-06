@@ -1,23 +1,24 @@
 pipeline{
 	agent any
+	
 	stages{
-		stage('Check stage'){
-			withMaven(maven : 'MVN'){
+		steps ('Check stage'){
+			withMaven(maven : 'Mvn'){
 		           bat 'mvn --version'
 			}
 		}
 	}
 		
 	stage('Compile stage'){
-			steps{
-				withMaven(maven : 'MVN'){
+			steps {
+				withMaven(maven : 'Mvn'){
 				bat 'mvn -f mvm-math/pom.xml compile'
 			}
 		}
 	}
 		stage('Test stage'){
-			steps{
-			withMaven(maven : 'MVN'){
+			steps {
+			withMaven(maven : 'Mvn'){
 			 	bat 'mvn -f mvm-math/pom.xml install'			
 			 	}
 		}
